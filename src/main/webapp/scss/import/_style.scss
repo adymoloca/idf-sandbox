@@ -1,0 +1,327 @@
+/** Add css rules here for your application. */
+
+/* 
+=================================================================================
+        ************************* NORMALIZE **************************
+================================================================================= 
+*/
+
+*, ::after, ::before {
+    box-sizing: border-box;
+  }
+  
+  @-ms-viewport {
+    width: device-width;
+  }
+  
+  
+  html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #3f51b5;
+  }
+  
+  body {
+    margin: 0 !important;
+    font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #f7f7f7;
+    text-align: left;
+    background-color: #3f51b5;
+  }
+  
+  button, input {
+    overflow: visible;
+  }
+  
+  button {
+    text-transform: none;
+  }
+  
+  select {
+    text-transform: none;
+    word-wrap: normal;
+    outline: none !important;
+  }
+  
+  ::selection, ::-moz-selection, ::-webkit-selection {
+    background: rgb(28, 21, 124);
+    color: #FFF;
+    text-shadow: none;
+  }
+  
+  :active, :focus {
+    outline: none !important;
+  }
+  
+  div {
+    display: block !important;
+    position: relative !important;
+    overflow: visible !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  header {
+    display: block !important;
+    width: 100% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: relative !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  }
+  
+  /* 
+  =================================================================================
+          ********************** Personal Style **************************
+  ================================================================================= 
+  */
+  
+  .workspace {
+    margin: 0 !important;
+    position: relative !important;
+  }
+  
+  .filter-toolbar {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap;
+    width: 100% !important;
+    background-color: #f7f7f7;
+    color: #343352;
+    box-shadow: 5px 5px 15px 8px #343352;
+    border-radius: 0.5em;
+    div {
+      padding: 10px 75px;
+      position: relative;
+      -ms-flex: 0 0 33.3333%;
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      width: 100% !important;
+    }
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 640px) {
+    .filter-toolbar div {
+      padding: 10px 10px;
+      position: relative;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100% !important;
+    }
+  }
+  
+  @media only screen and (min-width: 641px) and (max-width: 1080px) {
+    .filter-toolbar div {
+      padding: 10px 25px;
+      position: relative;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+      width: 100% !important;
+    }
+  }
+  
+  @media (min-width: 1081px) {
+    .filter-toolbar div {
+      padding: 10px 40px;
+      position: relative;
+      -ms-flex: 0 0 33.3333%;
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      width: 100% !important;
+    }
+  }
+  
+  .label, .filter-toolbar > div > label {
+    float: left !important;
+    max-width: 50%;
+    width: 50%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-size: 1.1em !important;
+    color: #343352 !important;
+    font-weight: bold;
+  }
+  
+  input, select {
+    border: none !important;
+    border-bottom: 1px solid #343352 !important;
+    background-color: #f7f7f7 !important;
+    color: #343352 !important;
+    float: right !important;
+    max-width: 50%;
+    width: 50%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-size: 1.05em !important;
+  }
+  
+  .apply-filters {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background-color: #f7f7f7;
+    border: 1px solid #f7f7f7;
+    padding: 0.375em 0.75em;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #343352;
+    box-shadow: 5px 5px 15px 8px #343352;
+    border-radius: 0.5em;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 20px auto 0px auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .person-view > section > .grid-view > div {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap;
+    width: 100% !important;
+    background-color: #f7f7f7;
+    color: #343352;
+    > {
+      .cellListEvenItem, .cellListOddItem {
+        padding: 10px 50px;
+        position: relative;
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        width: 100% !important;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 640px) {
+    .person-view > section > .grid-view > div > {
+      .cellListEvenItem, .cellListOddItem {
+        padding: 10px 20px;
+        position: relative;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100% !important;
+        margin: auto;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 641px) and (max-width: 1080px) {
+    .person-view > section > .grid-view > div > {
+      .cellListEvenItem, .cellListOddItem {
+        padding: 10px 30px;
+        position: relative;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        width: 100% !important;
+      }
+    }
+  }
+  
+  @media (min-width: 1081px) {
+    .person-view > section > .grid-view > div > {
+      .cellListEvenItem, .cellListOddItem {
+        padding: 10px 40px;
+        position: relative;
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        width: 100% !important;
+      }
+    }
+  }
+  
+  .controls {
+    padding: 7% 12% !important;
+  }
+  
+  .toggle-view-mode, .reset {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background-color: #f7f7f7;
+    border: 1px solid #f7f7f7;
+    padding: 0.375em 0.75em;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #343352;
+    box-shadow: 5px 5px 15px 8px #343352;
+    border-radius: 0.5em;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 20px auto 0px auto;
+  }
+  
+  .toggle-view-mode {
+    float: left;
+  }
+  
+  .reset {
+    float: right;
+  }
+  
+  .grid-view > div > div > .person-cell {
+    background-color: #3f51b5;
+    border-radius: 0.75em !important;
+    box-shadow: 5px 5px 15px 8px #343352;
+    color: #f7f7f7 !important;
+    > {
+      header {
+        text-align: center;
+        font-weight: bold;
+        background-color: #232d66 !important;
+      }
+      section {
+        padding: 5px 50px;
+      }
+    }
+  }
+  
+  .cellListEvenItem, .cellListOddItem {
+    padding: 15px auto !important;
+  }

@@ -1,1 +1,18 @@
 /** Add sass/scss rules here for your application. */
+@import 'import/mixins-master.scss';
+@import 'import/variables';
+
+@import 'import/normalize.css';
+@import 'import/alignament';
+@import 'import/colors';
+@import 'import/typography';
+@import 'import/buttons';
+
+@import 'import/style.scss';
+@import 'import/grid-view';
+@import 'import/table-view';
+@import 'import/filter-search';
+
+
+
+
